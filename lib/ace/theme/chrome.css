@@ -1,3 +1,18 @@
+.ace-chrome .ace_vinfo.ace_block-open,
+.ace-chrome .ace_vinfo.ace_block-close,
+.ace-chrome .ace_vinfo.ace_block-insert,
+.ace-chrome .ace_vinfo.ace_variable-open,
+.ace-chrome .ace_vinfo.ace_variable-close
+{
+    background-color: #ffff00;
+    color:black;
+}
+
+.ace-chrome .ace_vinfo.ace_variable
+{
+    color:darkred;
+}
+
 .ace-chrome .ace_gutter {
   background: #ebebeb;
   color: #333;
