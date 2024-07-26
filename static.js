@@ -17,6 +17,11 @@ if (allowSave)
     console.warn("writing files from browser is enabled");
 
 http.createServer(function(req, res) {
+    if (path.normalize(unescape(req.url)) !== unescape(req.url)) {
+        res.writeHead(403, { "Content-Type": "text/plain" });
+        res.end();
+        return;
+    }
     var uri = unescape(url.parse(req.url).pathname)
       , filename = path.join(process.cwd(), uri);
 
